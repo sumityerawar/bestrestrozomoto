@@ -12,9 +12,9 @@ class PlaceBooking extends Component {
         this.state={
             id:Math.floor(Math.random()*100000),
             hotel_name:this.props.match.params.restName,
-            name:'Aakash',
-            phone:'76767757567',
-            email:'a@gmail.com',
+            name:sessionStorage.getItem('userdata')?sessionStorage.getItem('userdata').split(',')[0]:'',
+            phone:sessionStorage.getItem('userdata')?sessionStorage.getItem('userdata').split(',')[2]:'',
+            email:sessionStorage.getItem('userdata')?sessionStorage.getItem('userdata').split(',')[1]:'',
             cost:0,
             address:'Hno12',
             details:''
